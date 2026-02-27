@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impacto de la Ciberseguridad</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,99 +18,129 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
+background:
+linear-gradient(rgba(8,15,25,0.88), rgba(8,15,25,0.88)),
+url('https://images.unsplash.com/photo-1555949963-aa79dcee981c'); /* Fondo tecnológico */
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#f5f5f5;
 }
+
+/* NAV */
 
 nav{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-padding:15px 50px;
+background:rgba(0,0,0,0.80);
+padding:18px 60px;
 display:flex;
 justify-content:space-between;
 z-index:1000;
 }
 
 nav a{
-color:#00f7ff;
+color:#d4af37;
 text-decoration:none;
-margin-left:20px;
-font-weight:600;
+margin-left:25px;
+font-weight:500;
+letter-spacing:1px;
 }
 
+/* HEADER */
+
 header{
-height:100vh;
+min-height:50vh; /* Reducido espacio superior */
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+padding:90px 20px 30px 20px;
+margin-top:60px;
 }
 
 header h1{
-font-family:'Orbitron',sans-serif;
-font-size:60px;
-color:#00f7ff;
-text-shadow:0 0 20px #00f7ff;
+font-family:'Playfair Display',serif;
+font-size:52px;
+letter-spacing:2px;
+color:#d4af37;
+margin-bottom:15px;
 }
 
 header h2{
-margin-top:20px;
 font-weight:300;
+font-size:18px;
+opacity:0.9;
 }
 
+/* SECTIONS */
+
 .section{
-padding:70px 80px;
+padding:60px 80px;
 max-width:1000px;
 margin:auto;
 }
 
+/* CARD */
+
 .card{
 background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(15px);
-box-shadow:0 0 40px rgba(0,255,255,0.2);
-margin-bottom:60px;
-transition:0.4s;
+padding:35px;
+border-radius:15px;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+margin-bottom:40px;
+animation:fadeUp 1s ease forwards;
+opacity:0;
+transform:translateY(30px);
 }
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 60px rgba(0,255,255,0.6);
+.card:nth-child(1){
+animation-delay:0.2s;
 }
 
 .card h3{
-color:#00f7ff;
-margin-bottom:25px;
-font-family:'Orbitron',sans-serif;
+color:#d4af37;
+margin-bottom:20px;
+font-family:'Playfair Display',serif;
+font-size:26px;
 }
+
+.card p{
+margin-bottom:18px;
+line-height:1.7;
+font-size:16px;
+}
+
+/* IMAGE */
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:25px;
+filter:brightness(0.9);
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:40px;
-background:black;
+padding:30px;
+background:#000;
+color:#aaa;
 margin-top:60px;
+font-size:14px;
 }
 
-.typing{
-border-right:3px solid #00f7ff;
-white-space:nowrap;
-overflow:hidden;
-animation:typing 4s steps(40,end), blink .8s infinite;
-}
+/* ANIMATION */
 
-@keyframes typing{
-from{width:0}
-to{width:100%}
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
 }
-
-@keyframes blink{
-50%{border-color:transparent}
 }
 
 </style>
@@ -123,18 +153,21 @@ to{width:100%}
 <div>
 <a href="#intro">Introducción</a>
 <a href="#impacto">Impacto</a>
-<a href="#futuro">Futuro</a>
+<a href="#futuro">Proyección</a>
 </div>
 </nav>
 
 <header>
-<h1 class="typing">El Impacto de la Ciberseguridad</h1>
+<h1>El Impacto de la Ciberseguridad</h1>
 <h2>Ingeniería de Sistemas | Cuarta Revolución Industrial</h2>
 </header>
 
 <section id="intro" class="section">
 <div class="card">
 <h3>Introducción</h3>
+
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+
 <p>La Cuarta Revolución Industrial representa una transformación sin precedentes en la historia de la humanidad. A diferencia de las revoluciones anteriores, que estuvieron marcadas por la mecanización, la electricidad o la automatización industrial, esta nueva etapa se caracteriza por la convergencia de tecnologías digitales avanzadas que integran el mundo físico, el digital y el biológico. Tecnologías como la inteligencia artificial, el Big Data, la computación en la nube, el Internet de las Cosas (IoT), la robótica avanzada y la automatización inteligente están redefiniendo la forma en que funcionan las organizaciones, los gobiernos y la sociedad en general.</p>
 <p>Sin embargo, este avance acelerado también ha generado una exposición constante a riesgos digitales, posicionando a la ciberseguridad como uno de los pilares fundamentales de la Ingeniería de Sistemas.</p>
 <p>En la actualidad, vivimos en una sociedad profundamente dependiente de la tecnología. Las actividades cotidianas, como realizar transacciones bancarias, almacenar información personal, estudiar en plataformas virtuales o comunicarse a través de redes sociales, dependen de sistemas informáticos interconectados. Esta interconectividad global ha traído enormes beneficios en términos de eficiencia, productividad y acceso a la información.</p>
@@ -147,6 +180,9 @@ to{width:100%}
 <section id="impacto" class="section">
 <div class="card">
 <h3>Impacto en la Ingeniería de Sistemas</h3>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
 <p>Uno de los cambios más significativos que ha traído la Cuarta Revolución Industrial es la necesidad de incorporar la seguridad desde la etapa inicial de diseño de cualquier sistema tecnológico. El concepto de "seguridad por diseño" implica que la protección no debe añadirse al final del desarrollo, sino integrarse desde el principio.</p>
 <p>Esto transforma la formación del ingeniero de sistemas, quien debe adquirir competencias no solo en programación y arquitectura de software, sino también en análisis de riesgos, criptografía, gestión de vulnerabilidades y normativas de seguridad. Organismos internacionales como OWASP proporcionan guías y estándares que todo desarrollador debe conocer para evitar las vulnerabilidades más comunes.</p>
 <p>Además, el uso masivo de servicios en la nube ha redefinido la manera en que las organizaciones gestionan su información. La migración de datos a entornos virtuales ofrece ventajas como escalabilidad y reducción de costos, pero también plantea nuevos desafíos en términos de protección de datos, control de accesos y cumplimiento normativo.</p>
@@ -161,6 +197,9 @@ to{width:100%}
 <section id="futuro" class="section">
 <div class="card">
 <h3>Mi Proyección Profesional</h3>
+
+<img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87">
+
 <p>Desde una perspectiva personal, la ciberseguridad es el área que más despierta mi interés dentro de la Ingeniería de Sistemas. Elegí esta carrera porque me apasiona la tecnología y su capacidad para transformar el mundo. Sin embargo, al profundizar en sus distintos campos, descubrí que la seguridad informática representa un desafío intelectual constante.</p>
 <p>Analizar vulnerabilidades, comprender el funcionamiento interno de los sistemas y anticipar posibles amenazas requiere pensamiento crítico, creatividad y actualización permanente. Esa complejidad es precisamente lo que más me motiva.</p>
 <p>Mi deseo de especializarme en ciberseguridad no responde únicamente a la alta demanda laboral, sino también a la motivación de contribuir activamente a la protección de entornos digitales. En un mundo cada vez más digitalizado, donde la información es uno de los activos más valiosos, contar con profesionales comprometidos con la seguridad es fundamental.</p>
@@ -171,7 +210,7 @@ to{width:100%}
 </section>
 
 <footer>
-© 2026 Kevin Oliveros | Ingeniería de Sistemas 
+© 2026 Kevin Oliveros | Ingeniería de Sistemas
 </footer>
 
 </body>
